@@ -10,7 +10,7 @@ const Handle = ({ style, handleRef, ...passProps }) => {
         backgroundColor: "#ffffff",
         border: "1.5px solid #B5BEC5",
         borderRadius: "100%",
-        cursor: "ew-resize",
+        cursor: "pointer",
         marginLeft: -13,
         height: 24,
         width: 24,
