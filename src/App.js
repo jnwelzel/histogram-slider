@@ -1,8 +1,10 @@
 import React from "react";
-import WunderSlider from "./WunderSlider/WunderSlider";
+import RangeFilter from "./components/RangeFilter.js/RangeFilter";
 import "./App.css";
 
-function App() {
+const HISTOGRAM_DATA = [];
+
+const App = () => {
   return (
     <div className="App">
       <h1>Rheostat</h1>
@@ -15,9 +17,9 @@ function App() {
           Github
         </a>
       </p>
-      <WunderSlider min={1} max={100} values={[30, 90]} />
+      <RangeFilter min={1} max={100} values={[30, 90]} />
     </div>
   );
-}
+};
 
 export default App;
