@@ -6,16 +6,21 @@ import Handle from "./Handle";
 import Background from "./Background";
 import ProgressBar from "./ProgressBar";
 
-const WunderSlider = ({ showHistogram, onChange, ...passProps }) => {
+const WunderSlider = ({
+  showHistogram,
+  onChange,
+  histogramRange,
+  ...passProps
+}) => {
   return (
     <div>
-      {showHistogram && <HistogramContainer />}
+      {showHistogram && <HistogramContainer range={histogramRange} />}
       <Rheostat
         {...passProps}
         handle={Handle}
         background={Background}
         progressBar={ProgressBar}
-        onChange={onChange}
+        onValuesUpdated={onChange}
       />
     </div>
   );

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import WunderSlider from "../WunderSlider/WunderSlider";
 
-const RangeFilter = ({ min, max }) => {
-  const [minHandle, setMinHandle] = useState(0);
-  const [maxHandle, setMaxHandle] = useState(100);
+const RangeFilter = ({ min, max, showHistogram, histogramRange }) => {
+  const [minHandle, setMinHandle] = useState(min);
+  const [maxHandle, setMaxHandle] = useState(max);
 
   const onChangeSlider = (event) => {
     const { values } = event;
@@ -13,13 +13,13 @@ const RangeFilter = ({ min, max }) => {
 
   return (
     <div>
-      RangeFilter.js
       <WunderSlider
         min={min}
         max={max}
         values={[minHandle, maxHandle]}
-        showHistogram
+        showHistogram={showHistogram}
         onChange={onChangeSlider}
+        histogramRange={histogramRange}
       />
       <div style={{ marginTop: 30 }}>
         <input

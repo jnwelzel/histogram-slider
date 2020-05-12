@@ -1,7 +1,7 @@
 import React from "react";
 
-const Histogram = ({ key, width, height, title }) => {
-  return <div>Histogram.js</div>;
+const Histogram = ({ width, height, title }) => {
+  return <svg>Histogram.js</svg>;
 };
 
 export default Histogram;
