@@ -1,21 +1,42 @@
 import React from "react";
-import Histogram from "./Histogram";
 
 const DEFAULT_HEIGHT = 64;
 
 const HistogramContainer = ({
   currentValue,
-  range = [],
-  min,
-  max,
+  range,
+  min = 1,
+  max = 42,
   height = DEFAULT_HEIGHT,
 }) => {
+  const width = 100 / range.length;
+
   return (
-    <div style={{ maxHeight: height, backgroundColor: "#ddd" }}>
-      {range.map((i) => (
-        <Histogram key={i.price} value={i.price} />
-      ))}
-    </div>
+    <svg
+      style={{
+        maxHeight: height,
+        backgroundColor: "#f4f3f3",
+        width: "100%",
+        display: "block",
+      }}
+    >
+      {range.map((item, index) => {
+        const barHeight = (100 * item.count) / max || 0;
+        const yAxisOffset = (barHeight / 100) * height;
+
+        return (
+          <rect
+            key={item.price}
+            title={item.price}
+            fill="#732DD9"
+            width={`${width}%`}
+            height={`${barHeight}%`}
+            y={height - yAxisOffset}
+            x={`${width * index}%`}
+          />
+        );
+      })}
+    </svg>
   );
 };
 
