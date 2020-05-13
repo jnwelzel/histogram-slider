@@ -3,7 +3,8 @@ import React from "react";
 const DEFAULT_HEIGHT = 64;
 
 const HistogramContainer = ({
-  currentValue,
+  currentMinValue,
+  currentMaxValue,
   range,
   min = 1,
   max = 42,
@@ -23,12 +24,16 @@ const HistogramContainer = ({
       {range.map((item, index) => {
         const barHeight = (100 * item.count) / max || 0;
         const yAxisOffset = (barHeight / 100) * height;
+        const barColor =
+          item.price > currentMinValue && item.price < currentMaxValue
+            ? "#732DD9"
+            : "#b5bec5";
 
         return (
           <rect
             key={item.price}
             title={item.price}
-            fill="#732DD9"
+            fill={barColor}
             width={`${width}%`}
             height={`${barHeight}%`}
             y={height - yAxisOffset}

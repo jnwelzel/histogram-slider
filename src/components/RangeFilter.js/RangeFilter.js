@@ -20,6 +20,8 @@ const RangeFilter = ({ min, max, showHistogram, histogramRange }) => {
         showHistogram={showHistogram}
         onChange={onChangeSlider}
         histogramRange={histogramRange}
+        currentMinValue={minHandle}
+        currentMaxValue={maxHandle}
       />
       <div style={{ marginTop: 30 }}>
         <input

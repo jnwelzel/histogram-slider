@@ -10,11 +10,19 @@ const WunderSlider = ({
   showHistogram,
   onChange,
   histogramRange,
+  currentMinValue,
+  currentMaxValue,
   ...passProps
 }) => {
   return (
     <div>
-      {showHistogram && <HistogramContainer range={histogramRange} />}
+      {showHistogram && (
+        <HistogramContainer
+          range={histogramRange}
+          currentMinValue={currentMinValue}
+          currentMaxValue={currentMaxValue}
+        />
+      )}
       <Rheostat
         {...passProps}
         handle={Handle}
