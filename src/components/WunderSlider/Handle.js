@@ -12,10 +12,10 @@ const Handle = ({ style, handleRef, ...passProps }) => {
         borderRadius: "100%",
         cursor: "pointer",
         marginLeft: -13,
-        height: 24,
-        width: 24,
+        height: 20,
+        width: 20,
         zIndex: 3,
-        top: -10,
+        top: -8,
       }}
     />
   );

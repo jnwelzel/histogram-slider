@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import RangeFilter from "./components/RangeFilter.js/RangeFilter";
 import "./App.css";
 
@@ -32,6 +32,12 @@ const HISTOGRAM_DATA = {
 };
 
 const App = () => {
+  const [showHistogram, setShowHistogram] = useState(true);
+
+  const toggleShowHistogram = () => {
+    setShowHistogram(!showHistogram);
+  };
+
   return (
     <div className="App">
       <h1>Rheostat</h1>
@@ -49,9 +55,21 @@ const App = () => {
         maxValue={HISTOGRAM_DATA.priceMax}
         maxCount={HISTOGRAM_DATA.countMax}
         values={[HISTOGRAM_DATA.priceMin, HISTOGRAM_DATA.priceMax]}
-        showHistogram
+        showHistogram={showHistogram}
         histogramRange={HISTOGRAM_DATA.priceHistogram}
       />
+      <div style={{ borderTop: "1px solid #ddd", marginTop: "30px" }}>
+        <p>
+          <input
+            onChange={toggleShowHistogram}
+            checked={showHistogram}
+            id="showHistogram"
+            name="showHistogram"
+            type="checkbox"
+          />
+          <label htmlFor="showHistogram">Show histogram</label>
+        </p>
+      </div>
     </div>
   );
 };
