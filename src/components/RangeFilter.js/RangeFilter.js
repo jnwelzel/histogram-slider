@@ -1,9 +1,24 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import WunderSlider from "../WunderSlider/WunderSlider";
 
-const RangeFilter = ({ min, max, showHistogram, histogramRange }) => {
-  const [minHandle, setMinHandle] = useState(min);
-  const [maxHandle, setMaxHandle] = useState(max);
+const propTypes = {
+  minValue: PropTypes.number.isRequired,
+  maxValue: PropTypes.number.isRequired,
+  maxCount: PropTypes.number.isRequired,
+  showHistogram: PropTypes.bool,
+  histogramRange: PropTypes.array,
+};
+
+const RangeFilter = ({
+  minValue,
+  maxValue,
+  maxCount,
+  showHistogram,
+  histogramRange,
+}) => {
+  const [minHandle, setMinHandle] = useState(minValue);
+  const [maxHandle, setMaxHandle] = useState(maxValue);
 
   const onChangeSlider = (event) => {
     const { values } = event;
@@ -14,8 +29,9 @@ const RangeFilter = ({ min, max, showHistogram, histogramRange }) => {
   return (
     <div>
       <WunderSlider
-        min={min}
-        max={max}
+        maxCount={maxCount}
+        minValue={minValue}
+        maxValue={maxValue}
         values={[minHandle, maxHandle]}
         showHistogram={showHistogram}
         onChange={onChangeSlider}
@@ -41,5 +57,7 @@ const RangeFilter = ({ min, max, showHistogram, histogramRange }) => {
     </div>
   );
 };
+
+RangeFilter.propTypes = propTypes;
 
 export default RangeFilter;

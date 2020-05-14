@@ -18,7 +18,7 @@ const HISTOGRAM_DATA = {
     { price: 1300, count: 22 },
     { price: 1350, count: 18 },
     { price: 1420, count: 15 },
-    { price: 1420, count: 11 },
+    { price: 1480, count: 11 },
     { price: 1530, count: 12 },
     { price: 1690, count: 19 },
     { price: 1710, count: 11 },
@@ -28,6 +28,7 @@ const HISTOGRAM_DATA = {
   ],
   priceMin: 888,
   priceMax: 2888,
+  countMax: 42,
 };
 
 const App = () => {
@@ -44,8 +45,9 @@ const App = () => {
         </a>
       </p>
       <RangeFilter
-        min={HISTOGRAM_DATA.priceMin}
-        max={HISTOGRAM_DATA.priceMax}
+        minValue={HISTOGRAM_DATA.priceMin}
+        maxValue={HISTOGRAM_DATA.priceMax}
+        maxCount={HISTOGRAM_DATA.countMax}
         values={[HISTOGRAM_DATA.priceMin, HISTOGRAM_DATA.priceMax]}
         showHistogram
         histogramRange={HISTOGRAM_DATA.priceHistogram}

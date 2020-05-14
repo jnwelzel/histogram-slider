@@ -1,4 +1,13 @@
 import React from "react";
+import PropTypes from "prop-types";
+
+const propTypes = {
+  currentMinValue: PropTypes.number.isRequired,
+  currentMaxValue: PropTypes.number.isRequired,
+  range: PropTypes.array.isRequired,
+  maxCount: PropTypes.number.isRequired,
+  height: PropTypes.number,
+};
 
 const DEFAULT_HEIGHT = 64;
 
@@ -6,8 +15,7 @@ const HistogramContainer = ({
   currentMinValue,
   currentMaxValue,
   range,
-  min = 1,
-  max = 42,
+  maxCount,
   height = DEFAULT_HEIGHT,
 }) => {
   const width = 100 / range.length;
@@ -22,7 +30,7 @@ const HistogramContainer = ({
       }}
     >
       {range.map((item, index) => {
-        const barHeight = (100 * item.count) / max || 0;
+        const barHeight = (100 * item.count) / maxCount || 0;
         const yAxisOffset = (barHeight / 100) * height;
         const barColor =
           item.price > currentMinValue && item.price < currentMaxValue
@@ -44,5 +52,7 @@ const HistogramContainer = ({
     </svg>
   );
 };
+
+HistogramContainer.propTypes = propTypes;
 
 export default HistogramContainer;
