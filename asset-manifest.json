@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/histogram-slider/static/css/main.3aa550a4.chunk.css",
+    "main.js": "/histogram-slider/static/js/main.c8f07051.chunk.js",
+    "main.js.map": "/histogram-slider/static/js/main.c8f07051.chunk.js.map",
+    "runtime-main.js": "/histogram-slider/static/js/runtime-main.e73aa591.js",
+    "runtime-main.js.map": "/histogram-slider/static/js/runtime-main.e73aa591.js.map",
+    "static/js/2.fd46f48f.chunk.js": "/histogram-slider/static/js/2.fd46f48f.chunk.js",
+    "static/js/2.fd46f48f.chunk.js.map": "/histogram-slider/static/js/2.fd46f48f.chunk.js.map",
+    "index.html": "/histogram-slider/index.html",
+    "precache-manifest.a091f06a01b58e0b2babca28c0ea2140.js": "/histogram-slider/precache-manifest.a091f06a01b58e0b2babca28c0ea2140.js",
+    "service-worker.js": "/histogram-slider/service-worker.js",
+    "static/css/main.3aa550a4.chunk.css.map": "/histogram-slider/static/css/main.3aa550a4.chunk.css.map",
+    "static/js/2.fd46f48f.chunk.js.LICENSE.txt": "/histogram-slider/static/js/2.fd46f48f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e73aa591.js",
+    "static/js/2.fd46f48f.chunk.js",
+    "static/css/main.3aa550a4.chunk.css",
+    "static/js/main.c8f07051.chunk.js"
+  ]
+}
