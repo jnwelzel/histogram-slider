@@ -45,6 +45,8 @@ const RangeFilter = ({
           name="min"
           onChange={(e) => setMinHandle(Number(e.target.value))}
           value={minHandle}
+          min={minValue}
+          max={maxValue}
         />
         -
         <input
@@ -52,6 +54,8 @@ const RangeFilter = ({
           name="max"
           onChange={(e) => setMaxHandle(Number(e.target.value))}
           value={maxHandle}
+          min={minValue}
+          max={maxValue}
         />
       </div>
     </div>
