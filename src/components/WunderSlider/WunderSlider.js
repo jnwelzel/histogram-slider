@@ -49,7 +49,7 @@ const WunderSlider = ({
         const barWidth = 100 / histogramRange.length;
         const rangeIndex = Math.floor(pos / barWidth);
         const leftStart = rangeIndex * barWidth;
-        const positionInBar = (pos - leftStart) / barWidth; // slider position inside current bar (0-100%)
+        const positionInBar = (pos - leftStart) / barWidth; // slider % position inside current bar (0...1)
         const lastIndex = histogramRange.length - 1;
         const priceRange =
           rangeIndex < lastIndex
@@ -57,10 +57,10 @@ const WunderSlider = ({
               histogramRange[rangeIndex].price
             : max - histogramRange[lastIndex - 1].price; // Price range current bar represents
         // Calculate priceDifference: priceRange relative to positionInBar
+        const priceDifference = priceRange * positionInBar;
         // Add priceDifference to current bar price, this is our result
-
-        console.log(">>>>>>>>>>>", positionInBar);
-        return Math.round((max - min) * decimal + min);
+        const currentPrice = histogramRange[rangeIndex].price + priceDifference;
+        return currentPrice;
       }
 
       return Math.round((max - min) * decimal + min);
