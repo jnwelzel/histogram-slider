@@ -60,7 +60,7 @@ const WunderSlider = ({
         const priceDifference = priceRange * positionInBar;
         // Add priceDifference to current bar price, this is our result
         const currentPrice = histogramRange[rangeIndex].price + priceDifference;
-        return currentPrice;
+        return Math.round(currentPrice);
       }
 
       return Math.round((max - min) * decimal + min);
