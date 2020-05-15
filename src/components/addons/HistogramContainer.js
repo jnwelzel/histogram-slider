@@ -33,7 +33,7 @@ const HistogramContainer = ({
         const barHeight = (100 * item.count) / maxCount || 0;
         const yAxisOffset = (barHeight / 100) * height;
         const barColor =
-          item.price > currentMinValue && item.price < currentMaxValue
+          item.price >= currentMinValue && item.price <= currentMaxValue
             ? "#732DD9"
             : "#b5bec5";
 

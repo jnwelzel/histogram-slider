@@ -30,6 +30,40 @@ const WunderSlider = ({
   maxValue,
   values,
 }) => {
+  const sliderAlgorithm = {
+    getPosition(value, min, max) {
+      return ((value - min) / (max - min)) * 100;
+    },
+    getValue(pos, min, max) {
+      const decimal = pos / 100;
+
+      if (pos === 0) {
+        return min;
+      }
+
+      if (pos === 100) {
+        return max;
+      }
+
+      if (showHistogram) {
+        const barWidth = 100 / histogramRange.length;
+        const rangeIndex = Math.floor(pos / barWidth);
+        const leftStart = rangeIndex * barWidth;
+        const positionInBar = (pos - leftStart) / barWidth; // slider position inside current bar (0-100%)
+        const lastIndex = histogramRange.length - 1;
+        const priceDifference =
+          rangeIndex < lastIndex
+            ? histogramRange[rangeIndex + 1].price -
+              histogramRange[rangeIndex].price
+            : max - histogramRange[lastIndex - 1].price;
+
+        console.log(">>>>>>>>>>>", positionInBar);
+        return Math.round((max - min) * decimal + min);
+      }
+
+      return Math.round((max - min) * decimal + min);
+    },
+  };
   return (
     <div>
       {showHistogram && (
@@ -48,6 +82,7 @@ const WunderSlider = ({
         background={Background}
         progressBar={ProgressBar}
         onValuesUpdated={onChange}
+        algorithm={sliderAlgorithm}
       />
     </div>
   );
