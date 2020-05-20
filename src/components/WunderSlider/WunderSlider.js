@@ -1,11 +1,8 @@
 import PropTypes from "prop-types";
 import HistogramContainer from "../addons/HistogramContainer";
-import "./rheostat.css";
+import "./WunderSlider.css";
 import React from "react";
 import Rheostat from "rheostat";
-import Handle from "./Handle";
-import Background from "./Background";
-import ProgressBar from "./ProgressBar";
 
 const propTypes = {
   showHistogram: PropTypes.bool,
@@ -81,9 +78,6 @@ const WunderSlider = ({
         values={values}
         min={minValue}
         max={maxValue}
-        handle={Handle}
-        background={Background}
-        progressBar={ProgressBar}
         onValuesUpdated={onChange}
         algorithm={sliderAlgorithm}
       />

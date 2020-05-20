@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import RangeFilter from "./components/RangeFilter.js/RangeFilter";
+import RangeFilter from "./components/RangeFilter/RangeFilter";
 import "./App.css";
 
 const HISTOGRAM_DATA = {
   priceHistogram: [
-    { price: 888, count: 2 },
+    { price: 888, count: 1 },
     { price: 1200, count: 3 },
     { price: 1500, count: 4 },
     { price: 1600, count: 2 },

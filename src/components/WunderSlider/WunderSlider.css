@@ -1,35 +1,34 @@
 .DefaultProgressBar__vertical {
-  width: 24px;
+  width: 2px;
   height: 100%;
 }
 .DefaultProgressBar_progressBar {
-  background-color: #abc4e8;
+  background-color: #732dd9;
   position: absolute;
 }
 .DefaultProgressBar_progressBar__vertical {
   height: 100%;
-  width: 24px;
+  width: 2px;
 }
 .DefaultProgressBar_background__vertical {
   height: 100%;
   top: 0px;
-  width: 15px;
+  width: 2px;
 }
 .DefaultProgressBar_background__horizontal {
-  height: 13px;
+  height: 2px;
   top: 0px;
 }
 .DefaultHandle_handle {
-  width: 24px;
-  height: 24px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #d8d8d8;
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid #b5bec5;
   background-color: #fcfcfc;
-  border-radius: 20%;
+  border-radius: 100%;
   outline: none;
   z-index: 2;
   box-shadow: 0 2px 2px #dbdbdb;
+  cursor: pointer;
 }
 .DefaultHandle_handle:focus {
   box-shadow: #abc4e8 0 0 1px 1px;
@@ -47,23 +46,23 @@
   background-color: #dadfe8;
 }
 .DefaultHandle_handle__horizontal {
-  margin-left: -12px;
-  top: -5px;
+  margin-left: -10px;
+  top: -8px;
 }
 .DefaultHandle_handle__horizontal:before {
-  top: 7px;
-  height: 10px;
+  top: 5px;
+  height: 8px;
+  width: 1px;
+  left: 7px;
+}
+.DefaultHandle_handle__horizontal:after {
+  top: 5px;
+  height: 8px;
   width: 1px;
   left: 10px;
 }
-.DefaultHandle_handle__horizontal:after {
-  top: 7px;
-  height: 10px;
-  width: 1px;
-  left: 13px;
-}
 .DefaultHandle_handle__vertical {
-  margin-top: -12px;
+  margin-top: -8px;
   left: -10px;
 }
 .DefaultHandle_handle__vertical:before {
@@ -79,21 +78,20 @@
   border-color: #dbdbdb;
 }
 .DefaultBackground {
-  background-color: #fcfcfc;
-  height: 15px;
+  background-color: #b5bec5;
+  height: 2px;
   width: 100%;
-  border: 1px solid #d8d8d8;
   position: relative;
 }
 .DefaultBackground_background__horizontal {
-  height: 15px;
-  top: -2px;
-  left: -2px;
-  bottom: 4px;
+  height: 2px;
+  top: 0;
+  left: 0;
+  bottom: 0;
   width: 100%;
 }
 .DefaultBackground_background__vertical {
-  width: 15px;
+  width: 2px;
   top: 0px;
   height: 100%;
 }
@@ -110,10 +108,10 @@
   height: 100%;
 }
 .handleContainer {
-  height: 15px;
-  top: -2px;
-  left: -2px;
-  bottom: 4px;
+  height: 2px;
+  top: 0;
+  left: 0;
+  bottom: 0;
   width: 100%;
   position: absolute;
 }
