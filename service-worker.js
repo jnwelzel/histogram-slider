@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/histogram-slider/precache-manifest.86f8b062b809deccf73e76fc7cd6871b.js"
+  "/histogram-slider/precache-manifest.480a128a0bb63797fc743fcef01047c8.js"
 );
 
 self.addEventListener('message', (event) => {
