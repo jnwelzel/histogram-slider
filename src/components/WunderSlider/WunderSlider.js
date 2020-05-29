@@ -29,7 +29,30 @@ const WunderSlider = ({
 }) => {
   const sliderAlgorithm = {
     getPosition(value, min, max) {
-      return ((value - min) / (max - min)) * 100;
+      if (value < min) {
+        return 0;
+      }
+      if (value > max) {
+        return 100;
+      }
+
+      let currMin = min;
+      let currMax = max;
+      let currItemIndex = 0;
+      const barWidth = 100 / histogramRange.length;
+      for (let i = histogramRange.length - 1; i >= 0; i--) {
+        if (value > histogramRange[i].price) {
+          currMin = histogramRange[i].price;
+          currMax = histogramRange[i + 1].price;
+          currItemIndex = i;
+          break;
+        }
+      }
+
+      const currPosInBar = (value - currMin) / (currMax - currMin);
+      const relativePos = barWidth * currPosInBar;
+      const res = currItemIndex * barWidth + relativePos;
+      return res;
     },
     getValue(pos, min, max) {
       const decimal = pos / 100;
