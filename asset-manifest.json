@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/histogram-slider/static/css/main.f0b21a2c.chunk.css",
-    "main.js": "/histogram-slider/static/js/main.6612bb5b.chunk.js",
-    "main.js.map": "/histogram-slider/static/js/main.6612bb5b.chunk.js.map",
+    "main.js": "/histogram-slider/static/js/main.6752a66d.chunk.js",
+    "main.js.map": "/histogram-slider/static/js/main.6752a66d.chunk.js.map",
     "runtime-main.js": "/histogram-slider/static/js/runtime-main.e73aa591.js",
     "runtime-main.js.map": "/histogram-slider/static/js/runtime-main.e73aa591.js.map",
     "static/js/2.1154370a.chunk.js": "/histogram-slider/static/js/2.1154370a.chunk.js",
     "static/js/2.1154370a.chunk.js.map": "/histogram-slider/static/js/2.1154370a.chunk.js.map",
     "index.html": "/histogram-slider/index.html",
-    "precache-manifest.480a128a0bb63797fc743fcef01047c8.js": "/histogram-slider/precache-manifest.480a128a0bb63797fc743fcef01047c8.js",
+    "precache-manifest.0187cd0c1a61a4f7dcd0b4378166faa2.js": "/histogram-slider/precache-manifest.0187cd0c1a61a4f7dcd0b4378166faa2.js",
     "service-worker.js": "/histogram-slider/service-worker.js",
     "static/css/main.f0b21a2c.chunk.css.map": "/histogram-slider/static/css/main.f0b21a2c.chunk.css.map",
     "static/js/2.1154370a.chunk.js.LICENSE.txt": "/histogram-slider/static/js/2.1154370a.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.e73aa591.js",
     "static/js/2.1154370a.chunk.js",
     "static/css/main.f0b21a2c.chunk.css",
-    "static/js/main.6612bb5b.chunk.js"
+    "static/js/main.6752a66d.chunk.js"
   ]
 }
